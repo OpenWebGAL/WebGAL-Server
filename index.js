@@ -50,6 +50,7 @@ if (webgalWd === '') {
     const dirInfo = fs.readdirSync(cwd);
     if (dirInfo.includes('index.html')) {
         logger.info(`在当前工作目录下启动 WebGAL`);
+        webgalWd = cwd;
     } else {
         // 全转成大写，复制一份副本
         const dirInfoUpperCase = dirInfo.map(e => e.toUpperCase());
